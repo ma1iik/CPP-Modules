@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 02:00:37 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/04/30 18:22:46 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/08 21:40:55 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 #include <iostream>
 #include "Brain.hpp"
+#include "WrongAnimal.hpp"
+
 
 class Animal
 {
@@ -42,7 +44,7 @@ class Cat : public Animal
 		void makeSound() const;
 		
 		private:
-        	Brain brain;
+        	Brain *brain;
 };
 
 class Dog : public Animal
@@ -57,5 +59,5 @@ class Dog : public Animal
 		void makeSound() const;
 		
 		private:
-        	Brain brain;
+        	Brain *brain;
 };

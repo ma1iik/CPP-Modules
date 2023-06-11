@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:04:42 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/07 06:35:00 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/11 22:30:11 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
@@ -118,6 +118,17 @@ int main() {
         std::cout << "Assigned: " << assignedShrubForm;
     } catch (std::exception &e) {
         std::cout << "Test 10: " << e.what() << std::endl;
+    }
+
+    // Test 11: Testing copy constructor
+
+    try {
+        std::cout << green << "Test 11: Testing copy constructor" << reset << std::endl;
+        PresidentialPardonForm copiedPresidentalForm(presForm);
+        std::cout << &presForm << std::endl;
+        std::cout << &copiedPresidentalForm << std::endl;
+    }  catch (std::exception &e) {
+        std::cout << "Test 11: " << e.what() << std::endl;
     }
 
     return 0;

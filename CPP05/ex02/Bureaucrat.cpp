@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:05:03 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/05 16:25:14 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/11 22:26:55 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(void) : _name("Undefined")
 {
@@ -24,8 +24,6 @@ Bureaucrat::Bureaucrat(const std::string &nm, int gd) : _name(nm), _grade(gd)
 		throw Bureaucrat::GradeTooHighException();
 	} else if (_grade > 150) {
 		throw Bureaucrat::GradeTooLowException();
-	} else {
-		this->_grade = _grade;
 	}
 }
 

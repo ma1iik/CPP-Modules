@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 02:31:47 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/04 08:33:37 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/10 09:20:12 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Form
 		Form	&operator=(const Form &rfr);
 
 		std::string		get_name() const;
-		bool				get_signed() const;
+		bool			get_signed() const;
 		int				get_signgrade() const;
 		int				get_execgrade() const;
 

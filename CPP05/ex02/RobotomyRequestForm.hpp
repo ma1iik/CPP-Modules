@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 05:11:32 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/07 04:34:08 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/10 09:49:58 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <typeinfo>
 #include <fstream>
 #include <unistd.h>
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <cstdlib>
 
 class RobotomyRequestForm : public AForm {

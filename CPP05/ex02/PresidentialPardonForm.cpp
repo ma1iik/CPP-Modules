@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 05:12:27 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/07 06:30:37 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/11 22:31:10 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(void) : AForm("PresidentialPardonForm", 25, 5){
@@ -20,8 +20,8 @@ PresidentialPardonForm::PresidentialPardonForm(void) : AForm("PresidentialPardon
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string& target) : AForm("PresidentialPardonForm", 25, 5) {
 	this->_target = target;
-	
 }
+
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& cpy) : AForm("PresidentialPardonForm", 25, 5) {
 	*this = cpy;
 }
@@ -31,10 +31,11 @@ PresidentialPardonForm::~PresidentialPardonForm() {}
 PresidentialPardonForm&	PresidentialPardonForm::operator=(const PresidentialPardonForm &rfr) {
 	if (this != &rfr)
 	{
-		AForm::operator=(rfr);
+		//AForm::operator=(rfr);
         this->_target = rfr._target;
 
 	}
+	std::cout << "I WAS HERE" << std::endl;
 	return *this;
 }
 	

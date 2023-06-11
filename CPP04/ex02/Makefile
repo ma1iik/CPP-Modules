@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+         #
+#    By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 18:49:08 by ma1iik            #+#    #+#              #
-#    Updated: 2023/04/30 18:17:32 by ma1iik           ###   ########.fr        #
+#    Updated: 2023/06/08 21:33:14 by misrailo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 SRC =	main.cpp \
 		Animal.cpp \
 		Brain.cpp \
+		WrongAnimal.cpp \
 
 OBJ = $(SRC:%.cpp=%.o)
 

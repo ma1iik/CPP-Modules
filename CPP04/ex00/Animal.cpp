@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 02:00:24 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/04/30 16:59:30 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/08 21:57:04 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Animal::Animal(const std::string& target_name)
 Animal::Animal(Animal const &cpy)
 {
 	std::cout << "Animal copy constructor called " << std::endl;
-    *this = cpy;
+   		*this = cpy;
 }
 
 std::string const   Animal::getType() const

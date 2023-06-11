@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 02:00:24 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/04/30 18:17:59 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/08 19:40:27 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 
 Animal::Animal(void)
 {
-	//std::cout << "Default Animal constructor called" << std::endl;
+	std::cout << "Default Animal constructor called" << std::endl;
 	this->type = "Unspecified";
 }
 
 Animal::~Animal(void)
 {
-	//std::cout << "Animal destructor called" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 	return;
 }
 
@@ -60,32 +60,35 @@ Animal &Animal::operator=(Animal const &rhs)
 
 Cat::Cat(void)
 {
-	std::cout << "Default Cat constructor called" << std::endl;
+	std::cout << "	Default Cat constructor called" << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain();
 }
 
 Cat::~Cat(void)
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "	Cat destructor called" << std::endl;
+	delete this->brain;
 	return;
 }
 
 Cat::Cat(const std::string& target_name)
 {
 	(void)target_name;
-	std::cout << "Cat constructor called" << std::endl;
+	std::cout << "	Cat constructor called" << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain();
 }
 
 Cat::Cat(Cat const &cpy) : Animal(cpy)
 {
-	std::cout << "Cat copy constructor called " << std::endl;
+	std::cout << "	Cat copy constructor called " << std::endl;
     *this = cpy;
 }
 
 void Cat::makeSound() const
 {
-	std::cout << "Meow Meow, Pussy" << std::endl;
+	std::cout << "		Meow Meow, Pussy" << std::endl;
 }
 
 Cat &Cat::operator=(Cat const &rhs)
@@ -99,32 +102,35 @@ Cat &Cat::operator=(Cat const &rhs)
 
 Dog::Dog(void)
 {
-	std::cout << "Default Dog constructor called" << std::endl;
+	std::cout << "	Default Dog constructor called" << std::endl;
 	this->type = "Dog";
+	this->brain = new Brain();
 }
 
 Dog::~Dog(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	delete this->brain;
+	std::cout << "	Dog destructor called" << std::endl;
 	return;
 }
 
 Dog::Dog(const std::string& target_name)
 {
 	(void)target_name;
-	std::cout << "Dog constructor called" << std::endl;
+	std::cout << "	Dog constructor called" << std::endl;
 	this->type = "Dog";
+	this->brain = new Brain();
 }
 
 Dog::Dog(Dog const &cpy) : Animal(cpy)
 {
-	std::cout << "Dog copy constructor called " << std::endl;
+	std::cout << "	Dog copy constructor called " << std::endl;
     *this = cpy;
 }
 
 void Dog::makeSound() const
 {
-	std::cout << "Woof Woof, Dawg" << std::endl;
+	std::cout << "		Woof Woof, Dawg" << std::endl;
 }
 
 Dog &Dog::operator=(Dog const &rhs)

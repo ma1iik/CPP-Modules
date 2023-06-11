@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 02:00:24 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/04/30 18:27:53 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/08 22:01:29 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,13 @@ Cat::Cat(void)
 {
 	std::cout << "Default Cat constructor called" << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain();
 }
 
 Cat::~Cat(void)
 {
 	std::cout << "Cat destructor called" << std::endl;
+	delete this->brain;
 	return;
 }
 
@@ -70,6 +72,7 @@ Cat::Cat(const std::string& target_name)
 	(void)target_name;
 	std::cout << "Cat constructor called" << std::endl;
 	this->type = "Cat";
+	this->brain = new Brain();
 }
 
 Cat::Cat(Cat const &cpy) : Animal(cpy)
@@ -96,11 +99,13 @@ Dog::Dog(void)
 {
 	std::cout << "Default Dog constructor called" << std::endl;
 	this->type = "Dog";
+	this->brain = new Brain();
 }
 
 Dog::~Dog(void)
 {
 	std::cout << "Dog destructor called" << std::endl;
+	delete this->brain;
 	return;
 }
 
@@ -109,6 +114,7 @@ Dog::Dog(const std::string& target_name)
 	(void)target_name;
 	std::cout << "Dog constructor called" << std::endl;
 	this->type = "Dog";
+	this->brain = new Brain();
 }
 
 Dog::Dog(Dog const &cpy) : Animal(cpy)
