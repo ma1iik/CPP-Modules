@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 02:31:47 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/07 05:23:28 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/12 22:12:27 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class AForm
 		int				get_execgrade() const;
 
 		void			beSigned(const Bureaucrat &rfr);
-		void			execute(Bureaucrat const & executor);
+		void			execute(Bureaucrat const & executor) const;
 		virtual void	perform_execute(Bureaucrat const & executor) const = 0;
 		
 		class GradeTooHighException : public std::exception

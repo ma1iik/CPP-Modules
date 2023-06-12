@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+         #
+#    By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 18:49:08 by ma1iik            #+#    #+#              #
-#    Updated: 2023/05/07 04:38:14 by ma1iik           ###   ########.fr        #
+#    Updated: 2023/06/12 18:18:05 by misrailo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,11 @@ FLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
 SRC =	main.cpp \
 		Bureaucrat.cpp \
-		Form.cpp	\
+		AForm.cpp	\
 		PresidentialPardonForm.cpp \
 		RobotomyRequestForm.cpp \
 		ShrubberyCreationForm.cpp \
+		Intern.cpp \
 
 OBJ = $(SRC:%.cpp=%.o)
 

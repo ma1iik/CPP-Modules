@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.cpp                                           :+:      :+:    :+:   */
+/*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 02:30:58 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/07 05:26:17 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/12 22:23:42 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 AForm::AForm(void) : _name("Undefined"), _signed(false), _sign_grade(150), _exec_grade(150) {}
@@ -67,12 +67,12 @@ void			AForm::beSigned(const Bureaucrat &rfr)
 {
 	if (rfr.getGrade() <= this->_sign_grade)
 	{
-		std::cout << rfr.getName() << " signed " << this->_name << std::endl;
+		//std::cout << rfr.getName() << " signed " << this->_name << std::endl;
 		this->_signed = true;
 	}
 	else
 	{
-		std::cout << rfr.getName() << " couldnt sign " << this->_name << std::endl;
+		//std::cout << rfr.getName() << " couldnt sign " << this->_name << std::endl;
 		throw AForm::GradeTooLowException();
 	}
 }
@@ -101,13 +101,13 @@ const char *AForm::FormNotSigned::what() const throw ()
 	return ("Form not signed");
 }
 
-void			AForm::execute(Bureaucrat const & executor) {
+void			AForm::execute(Bureaucrat const & executor) const {
     if (this->_exec_grade < executor.getGrade()) {
-		std::cout << executor.getName() << " failed executing " << this->_name << std::endl;
+		//std::cout << executor.getName() << " failed executing " << this->_name << std::endl;
         throw (GradeTooLowException());
     }
     if (!this->get_signed()) {
-        std::cout << executor.getName() << " failed executing " << this->_name << std::endl;
+        //std::cout << executor.getName() << " failed executing " << this->_name << std::endl;
 		throw (FormNotSigned());
     }
     this->perform_execute(executor);

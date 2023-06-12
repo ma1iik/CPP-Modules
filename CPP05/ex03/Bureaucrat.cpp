@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 11:05:03 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/05 16:25:14 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/12 22:27:03 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(void) : _name("Undefined")
 {
@@ -24,8 +24,6 @@ Bureaucrat::Bureaucrat(const std::string &nm, int gd) : _name(nm), _grade(gd)
 		throw Bureaucrat::GradeTooHighException();
 	} else if (_grade > 150) {
 		throw Bureaucrat::GradeTooLowException();
-	} else {
-		this->_grade = _grade;
 	}
 }
 
@@ -82,7 +80,7 @@ void Bureaucrat::signForm(AForm &form) {
     try
 	{
         form.beSigned(*this);
-        std::cout << _name << " signed " << form.get_name() << std::endl;
+        //std::cout << _name << " signed " << form.get_name() << std::endl;
     }
 	catch (const AForm::GradeTooLowException& e)
 	{
@@ -96,5 +94,35 @@ void Bureaucrat::signForm(AForm &form) {
 	{
         std::cout << _name << " couldn't sign " << form.get_name() << " because an unknown error occurred: " << e.what() << std::endl;
     }
+}
+
+void	Bureaucrat::executeForm(AForm const & form) {
+	if (!form.get_signed())
+	{
+		std::cout << _name << " couldn't execute " << form.get_name() << " because it is not signed" << std::endl;
+		return;
+	}
+	
+	try
+	{
+        form.execute(*this);
+        //std::cout << _name << " signed " << form.get_name() << std::endl;
+    }
+	catch (const AForm::GradeTooLowException& e)
+	{
+        std::cout << _name << " couldn't execute " << form.get_name() << " because " << e.what() << std::endl;
+		return;
+    }
+	catch (const AForm::GradeTooHighException& e)
+	{
+        std::cout << _name << " couldn't execute " << form.get_name() << " because " << e.what() << std::endl;
+		return;
+    }
+	catch (const std::exception& e)
+	{
+        std::cout << _name << " couldn't execute " << form.get_name() << " because an unknown error occurred: " << e.what() << std::endl;
+		return;
+    }
+	std::cout << _name << " executed " << form.get_name() << std::endl;
 }
 

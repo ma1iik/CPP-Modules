@@ -6,7 +6,7 @@
 #    By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/18 18:49:08 by ma1iik            #+#    #+#              #
-#    Updated: 2023/06/10 09:42:04 by misrailo         ###   ########.fr        #
+#    Updated: 2023/06/12 17:06:19 by misrailo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,5 +36,6 @@ clean:
 
 fclean : clean
 	rm -rf a.out
+	rm -rf *_shrubbery
 
 re : fclean all

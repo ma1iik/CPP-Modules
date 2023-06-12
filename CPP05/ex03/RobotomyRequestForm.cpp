@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ma1iik <ma1iik@student.42.fr>              +#+  +:+       +#+        */
+/*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 05:11:21 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/05/07 06:31:46 by ma1iik           ###   ########.fr       */
+/*   Updated: 2023/06/12 17:11:38 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm(void)  : AForm("RobotomyRequestForm", 72, 45) {

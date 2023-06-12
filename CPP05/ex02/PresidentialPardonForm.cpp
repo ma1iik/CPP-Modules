@@ -6,7 +6,7 @@
 /*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 05:12:27 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/06/11 22:31:10 by misrailo         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:42:51 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,8 @@ PresidentialPardonForm::~PresidentialPardonForm() {}
 PresidentialPardonForm&	PresidentialPardonForm::operator=(const PresidentialPardonForm &rfr) {
 	if (this != &rfr)
 	{
-		//AForm::operator=(rfr);
         this->_target = rfr._target;
-
 	}
-	std::cout << "I WAS HERE" << std::endl;
 	return *this;
 }
 	

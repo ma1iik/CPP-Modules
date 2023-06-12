@@ -6,7 +6,7 @@
 /*   By: misrailo <misrailo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 05:11:02 by ma1iik            #+#    #+#             */
-/*   Updated: 2023/06/10 09:50:01 by misrailo         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:43:31 by misrailo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rfr) {
 	if (this != &rfr)
 	{
-		AForm::operator=(rfr);
         this->_target = rfr._target;
-
 	}
 	return *this;
 }
